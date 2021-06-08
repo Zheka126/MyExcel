@@ -1,5 +1,2 @@
-
-import "./module.js"
-import "./scss/index.scss"
-
-console.log("JPpioioijoij");
+import './scss/index.scss';
+console.log('jpa');
