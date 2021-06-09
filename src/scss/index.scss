@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import 'normalize.css';
+
+@import 'header';
+@import 'toolbar';
+@import 'formula';
+@import 'table';
+@import 'dashboard';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  font-size: 22px;
+}
+
+.excel {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+  color: #888;
+}
