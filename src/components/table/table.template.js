@@ -3,18 +3,29 @@ const CHARCODE = {
   Z: 90,
 };
 
-function createCell() {
-  return `<div class="cell" contenteditable></div>`;
+function createCell(_, col) {
+  return `
+  <div class="cell" contenteditable data-cell="${col}">
+  </div>
+  `;
 }
 
-function createCol(col) {
-  return `<div class="column">${col}</div>`;
+function createCol(col, index) {
+  return `
+    <div class="column" data-type="resizable" data-col="${index}">
+      ${col}
+      <div class="col-resize" data-resize="col"></div>
+    </div>
+  `;
 }
 
 function createRow(i, content) {
   return `
-    <div class="row">
-      <div class="row-info">${i}</div>
+    <div class="row" data-type="resizable">
+      <div class="row-info">
+        ${i}
+        ${i ? '<div class="row-resize" data-resize="row"></div>' : ''}
+      </div>
       <div class="row-data">${content}</div>
     </div>
     `;
