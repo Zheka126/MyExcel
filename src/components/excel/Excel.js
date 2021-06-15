@@ -18,10 +18,6 @@ export class Excel {
     this.components = this.components.map((Component) => {
       const $rooEl = $.create('div', Component.className);
       const component = new Component($rooEl, componentOptions);
-      // debug
-      // if (component.name) {
-      //   window['c' + component.name] = component;
-      // }
       $rooEl.html(component.toHTML());
       $root.append($rooEl);
       return component;
