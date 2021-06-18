@@ -1,12 +1,13 @@
 @mixin button($color: green) {
   position: relative;
+  display: inline-block;
   height: 28px;
   min-width: 28px;
   margin: 0 5px;
   padding: 3px;
   text-align: center;
-  display: inline-block;
   color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
 
   & i {
     font-size: 24px;
@@ -20,6 +21,7 @@
   &:active,
   &.active {
     color: $color;
+    background-color: rgba(56, 56, 56, 0.2);
   }
 }
 
